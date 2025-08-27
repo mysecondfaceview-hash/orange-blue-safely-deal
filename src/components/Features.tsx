@@ -1,42 +1,36 @@
-import { Shield, Truck, Award, Headphones, Factory, Globe } from "lucide-react";
+import { Shield, Truck, Award, Factory, Headphones, Globe } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
-      icon: Factory,
-      title: "Bulk Wholesale Pricing",
-      description: "Competitive rates for large quantity orders with tiered pricing structure for maximum savings.",
-      gradient: "from-primary to-primary-glow"
-    },
-    {
-      icon: Award,
-      title: "Premium Branded Products",
-      description: "Authentic safety equipment from world-renowned brands with certified quality assurance.",
-      gradient: "from-secondary to-accent"
+      icon: Shield,
+      title: "Certified Safety Standards",
+      description: "All equipment meets or exceeds industry safety certifications and compliance requirements."
     },
     {
       icon: Truck,
-      title: "Kingdom-Wide Delivery",
-      description: "Fast, reliable delivery across Saudi Arabia with real-time tracking and logistics support.",
-      gradient: "from-primary to-secondary"
+      title: "Bulk Order Fulfillment",
+      description: "Streamlined logistics for large orders with flexible delivery scheduling and tracking."
     },
     {
-      icon: Shield,
-      title: "Compliance Guaranteed",
-      description: "All products meet international safety standards with full documentation and certificates.",
-      gradient: "from-secondary to-primary"
+      icon: Award,
+      title: "Premium Brand Partners",
+      description: "Exclusive partnerships with leading safety manufacturers for authentic products."
+    },
+    {
+      icon: Factory,
+      title: "Fast Procurement",
+      description: "Expedited processing and shipping for urgent safety equipment requirements."
     },
     {
       icon: Headphones,
       title: "Dedicated B2B Support",
-      description: "24/7 professional support team specialized in bulk orders and corporate requirements.",
-      gradient: "from-primary-glow to-secondary"
+      description: "Specialized account managers for personalized service and bulk pricing consultation."
     },
     {
       icon: Globe,
-      title: "Multi-Industry Solutions",
-      description: "Comprehensive safety solutions for construction, oil & gas, manufacturing, and more.",
-      gradient: "from-accent to-primary"
+      title: "Quality Assurance",
+      description: "Rigorous quality control processes ensure every product meets our high standards."
     }
   ];
 
@@ -54,18 +48,22 @@ const Features = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="bg-card border border-border rounded-2xl p-8 hover:shadow-[var(--shadow-elegant)] transition-all duration-300 hover:-translate-y-2 group"
-            >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <feature.icon className="w-8 h-8 text-white" />
+          {features.map((feature, index) => {
+            const IconComponent = feature.icon;
+            return (
+              <div key={index} className="card-modern group cursor-pointer">
+                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                  <IconComponent className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="heading-md text-foreground mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
