@@ -22,15 +22,15 @@
     --primary-foreground: 0 0% 100%;
     --primary-glow: 25 90% 60%;
 
-    /* Blue secondary - professional navy */
-    --secondary: 218 65% 45%;
+    /* Dark blue secondary - professional navy */
+    --secondary: 218 85% 25%;
     --secondary-foreground: 0 0% 100%;
 
     /* Professional grays - lighter for modern feel */
     --muted: 210 15% 96%;
     --muted-foreground: 210 15% 45%;
 
-    --accent: 218 65% 45%;
+    --accent: 218 85% 25%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -79,13 +79,13 @@
     --primary: 25 85% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 218 65% 45%;
+    --secondary: 218 85% 25%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 15% 15%;
     --muted-foreground: 210 15% 65%;
 
-    --accent: 218 65% 45%;
+    --accent: 218 85% 25%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
